@@ -19,7 +19,7 @@ gcloud services enable cloudbuild.googleapis.com > /dev/null 2>&1
 printf "Completed.\n"
 
 printf "Building philski-staging Container..."
-cd ~/philski-staging-to-microservices/philski-staging
+cd ~/philski-staging-main/philski-staging
 gcloud builds submit --tag gcr.io/${GOOGLE_CLOUD_PROJECT}/philski-staging:1.0.0 . > /dev/null 2>&1
 printf "Completed.\n"
 
