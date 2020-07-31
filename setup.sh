@@ -14,26 +14,26 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 printf "Checking for required npm version..."
-npm install -g npm > ~/philski-staging-to-microservices/logs/npm.txt 2>&1
+npm install -g npm > ~/philski-staging-main/logs/npm.txt 2>&1
 printf "Completed.\n"
 
 printf "Installing philski-staging dependencies..."
 cd ./philski-staging
-npm install > ~/philski-staging-to-microservices/logs/philski-staging.txt 2>&1
+npm install > ~/philski-staging-main/logs/philski-staging.txt 2>&1
 printf "Completed.\n"
 
 printf "Installing microservies dependencies..."
 cd ../microservices
-npm install > ~/philski-staging-to-microservices/logs/microservices.txt 2>&1
+npm install > ~/philski-staging-main/logs/microservices.txt 2>&1
 printf "Completed.\n"
 
 printf "Installing React app dependencies..."
 cd ../react-app
-npm install > ~/philski-staging-to-microservices/logs/react.txt 2>&1
+npm install > ~/philski-staging-main/logs/react.txt 2>&1
 printf "Completed.\n"
 
 printf "Building React app and placing into sub projects..."
-npm run build > ~/philski-staging-to-microservices/logs/build.txt 2>&1
+npm run build > ~/philski-staging-main/logs/build.txt 2>&1
 printf "Completed.\n\n"
 
 printf "Script completed successfully!\n"
