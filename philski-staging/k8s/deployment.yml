@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: philski-staging
+  labels:
+    app: philski-staging
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: philski-staging
+  template:
+    metadata:
+      labels:
+        app: philski-staging
+    spec:
+      containers:
+      - name: philski-staging
+        image: gcr.io/<PROJECT_ID>/philski-staging:1.0.0
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8080
